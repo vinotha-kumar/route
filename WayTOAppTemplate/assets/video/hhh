@@ -1,0 +1,12 @@
+
+var starttime = 2000;  // start at 2 seconds
+var endtime = 4000;    // stop at 4 seconds
+
+var video = document.getElementById('v2');
+video.currentTime = starttime;
+
+video.addEventListener("timeupdate", function() {
+    if (video.currentTime >= endtime) {
+        video.pause();
+    }
+}, false);
